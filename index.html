@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NihuOS // Nihal Chaudhary</title>
+    <meta
+      name="description"
+      content="The interactive OS portfolio of John Doe, a creative developer."
+    />
+    <meta
+      name="keywords"
+      content="creative developer, os portfolio, desktop ui, interactive, gsap, draggable"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="boot-loader">
+      <div id="boot-log"></div>
+      <div id="progress-bar-container"><div id="progress-bar"></div></div>
+    </div>
+
+    <div id="top-bar">
+      <span id="top-bar-logo">BentoOS</span>
+      <span id="clock"></span>
+    </div>
+
+    <div id="desktop">
+      <div class="desktop-icon" data-window="about-window">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle></svg
+        ><span>User_Profile</span>
+      </div>
+      <div class="desktop-icon" data-window="projects-window">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+          ></path></svg
+        ><span>Showcase.dir</span>
+      </div>
+      <div class="desktop-icon" data-window="system-monitor-window">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg
+        ><span>System_Monitor</span>
+      </div>
+      <div class="desktop-icon" data-window="settings-window">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <circle cx="12" cy="12" r="3"></circle>
+          <path
+            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
+          ></path></svg
+        ><span>Settings</span>
+      </div>
+    </div>
+
+    <!-- Window Templates -->
+    <div id="about-window" class="window">
+      <div class="window-header">
+        <span class="window-title">About Me</span>
+        <div class="window-controls">
+          <button class="control-btn close-btn"></button>
+        </div>
+      </div>
+      <div class="window-body">
+        <div class="profile">
+          <svg
+            class="profile-pic"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1"
+          >
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <div>
+            <h2 class="content-title" style="margin-bottom: 0.5rem">
+              Nihal Chaudhary
+            </h2>
+            <div class="social-links">
+              <a href="#" target="_blank">GitHub</a
+              ><a href="#" target="_blank">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+        <p>
+          🚀 I'm a passionate developer focused on building modern, interactive,
+          and meaningful web experiences. With a strong foundation in web
+          development, C/C++, backend architecture, and UI design, I aim to
+          blend engineering precision with creativity.
+        </p>
+        <h4>💻 What I Do:</h4>
+        <ul>
+          <li>
+            Build full-stack web apps using React, Node.js, and TypeScript
+          </li>
+          <li>
+            Design modular backends (e.g., Prisma, Express) with scalable
+            database schemas
+          </li>
+          <li>
+            Create visually engaging UI/UX using GSAP, Three.js, and ShadCN/MUI
+          </li>
+          <li>Tinker with system design, APIs, and open-source tools</li>
+          <li>
+            Build desktop/web hybrid apps with Electron or Flutter
+            (Linux-friendly)
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="projects-window" class="window" style="top: 200px; left: 350px">
+      <div class="window-header">
+        <span class="window-title">/Showcase/</span>
+        <div class="window-controls">
+          <button class="control-btn close-btn"></button>
+        </div>
+      </div>
+      <div class="window-body">
+        <h2 class="content-title">🏆 Notable Work</h2>
+        <div class="project">
+          <h3>ParataPay: Group Expense Splitter</h3>
+          <p>Custom schema, real-time sync for group expense management.</p>
+          <div class="project-tags">
+            <span class="project-tag">React</span
+            ><span class="project-tag">Node.js</span
+            ><span class="project-tag">Prisma</span>
+          </div>
+        </div>
+        <div class="project">
+          <h3>SCMS: Smart Classroom Management</h3>
+          <p>A system for modern classroom management and interaction.</p>
+          <div class="project-tags">
+            <span class="project-tag">Full-Stack</span>
+          </div>
+        </div>
+        <div class="project">
+          <h3>NihuOS</h3>
+          <p>This very OS-style interactive portfolio!</p>
+          <div class="project-tags">
+            <span class="project-tag">HTML</span
+            ><span class="project-tag">CSS</span
+            ><span class="project-tag">GSAP</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      id="system-monitor-window"
+      class="window"
+      style="top: 150px; left: 250px; width: 700px; height: 450px"
+    >
+      <div class="window-header">
+        <span class="window-title">System Monitor</span>
+        <div class="window-controls">
+          <button class="control-btn close-btn"></button>
+        </div>
+      </div>
+      <div class="window-body" id="system-monitor-body">
+        <div class="chart-container">
+          <h2 class="content-title">Skill Proficiency</h2>
+          <ul class="skill-bars" id="skill-bars"></ul>
+        </div>
+        <div class="processes-container">
+          <h2 class="content-title">Core Processes</h2>
+          <div class="process-list" id="process-list"></div>
+        </div>
+      </div>
+    </div>
+    <div id="contact-window" class="window" style="top: 250px; left: 450px">
+      <div class="window-header">
+        <span class="window-title">Mail</span>
+        <div class="window-controls">
+          <button class="control-btn close-btn"></button>
+        </div>
+      </div>
+      <div class="window-body">
+        <h2 class="content-title">📫 Get in Touch</h2>
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:your.email@example.com">[your email]</a>
+        </p>
+      </div>
+    </div>
+    <div
+      id="settings-window"
+      class="window"
+      style="top: 300px; left: 550px; height: 300px"
+    >
+      <div class="window-header">
+        <span class="window-title">Settings</span>
+        <div class="window-controls">
+          <button class="control-btn close-btn"></button>
+        </div>
+      </div>
+      <div class="window-body">
+        <h2 class="content-title">Theme</h2>
+        <p>Select an accent color for the OS.</p>
+        <div class="theme-options" id="theme-options"></div>
+      </div>
+    </div>
+    <div
+      id="notepad-window"
+      class="window"
+      style="top: 350px; left: 650px; height: 400px; width: 500px"
+    >
+      <div class="window-header">
+        <span class="window-title">Notepad</span>
+        <div class="window-controls">
+          <button class="control-btn close-btn"></button>
+        </div>
+      </div>
+      <div class="window-body" style="padding: 0.5rem">
+        <textarea
+          id="notepad-textarea"
+          placeholder="Type your notes here..."
+        ></textarea>
+      </div>
+    </div>
+
+    <div id="dock">
+      <div class="dock-item" data-window="about-window">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+      </div>
+      <div class="dock-item" data-window="system-monitor-window">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+        </svg>
+      </div>
+      <div class="dock-item" data-window="projects-window">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+          ></path>
+        </svg>
+      </div>
+      <div class="dock-item" data-window="contact-window">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+          ></path>
+          <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
+      </div>
+      <div class="dock-item" data-window="settings-window">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <circle cx="12" cy="12" r="3"></circle>
+          <path
+            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
+          ></path>
+        </svg>
+      </div>
+      <div class="dock-item" data-window="notepad-window">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+          ></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Draggable.min.js"></script>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
